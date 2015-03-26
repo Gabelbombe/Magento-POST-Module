@@ -25,11 +25,11 @@
         <events>
             <sales_order_place_after>
                 <observers>
-                    <infinitelywhite_orderevent>
-                        <class>infinitelywhite_orderevent/observer</class>
-                        <method>exportNewOrder</method>
+                    <ehime_postmodule>
+                        <class>ehime_postmodule/observer</class>
+                        <method>ping</method>
                         <type>singleton</type>
-                    </infinitelywhite_orderevent >
+                    </ehime_postmodule>
                 </observers>
             </sales_order_place_after>
         </events>
@@ -47,17 +47,3 @@
         </routers>
     </admin>
 </config>
-
-
-<adminhtml>
-    <events>
-        <catalog_product_save_before><!-- observe the event -->
-            <observers>
-                <easylife_meta>
-                    <class>easylife_meta/observer</class>
-                    <method>autoMetaDescription</method>
-                </easylife_meta>
-            </observers>
-        </catalog_product_save_before>
-    </events>
-</adminhtml>
