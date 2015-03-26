@@ -1,5 +1,13 @@
-#POST Module
+## POST Module
+##
+
+## declaration
 app/etc/modules/Ehime_Postmodule.xml app/etc/modules/Ehime_Postmodule.xml
 
+## core files
+app/code/local/Ehime/Postmodule/Helper/Data.php app/code/local/Ehime/Postmodule/Helper/Data.php
+app/code/local/Ehime/Postmodule/controllers/IndexController.php app/code/local/Ehime/Postmodule/controllers/IndexController.php
+
+## etc/
 app/code/local/Ehime/Postmodule/etc/adminhtml.xml app/code/local/Ehime/Postmodule/etc/adminhtml.xml
 app/code/local/Ehime/Postmodule/etc/config.xml app/code/local/Ehime/Postmodule/etc/config.xml
