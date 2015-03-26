@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <ehime_postmodule>
-            <version>1.0.0</version>
+        <Ehime_Postmodule>
+            <version>0.0.1</version>
             <depends>
                 <!-- no dependencies -->
             </depends>
-        </ehime_postmodule>
+        </Ehime_Postmodule>
     </modules>
     <global>
-        <models />
+        <models>
+            <ehime_postmodule>
+                <class>Ehime_Postmodule_Model</class>
+            </ehime_postmodule>
+        </models>
         <blocks />
         <resources />
         <extraconfig />
@@ -18,6 +22,18 @@
                 <class>Ehime_Postmodule_Helper</class>
             </postmodule>
         </helpers>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <infinitelywhite_orderevent>
+                        <class>infinitelywhite_orderevent/observer</class>
+                        <method>exportNewOrder</method>
+                        <type>singleton</type>
+                    </infinitelywhite_orderevent >
+                </observers>
+            </sales_order_place_after>
+        </events>
+
     </global>
     <admin>
         <routers>
@@ -31,3 +47,17 @@
         </routers>
     </admin>
 </config>
+
+
+<adminhtml>
+    <events>
+        <catalog_product_save_before><!-- observe the event -->
+            <observers>
+                <easylife_meta>
+                    <class>easylife_meta/observer</class>
+                    <method>autoMetaDescription</method>
+                </easylife_meta>
+            </observers>
+        </catalog_product_save_before>
+    </events>
+</adminhtml>

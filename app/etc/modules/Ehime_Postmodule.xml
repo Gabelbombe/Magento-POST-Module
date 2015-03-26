@@ -2,8 +2,11 @@
 <config>
     <modules>
         <Ehime_Postmodule>
-            <active>true</active>
             <codePool>local</codePool>
+            <active>true</active>
+            <depends>
+                <Mage_Catalog />
+            </depends>
         </Ehime_Postmodule>
     </modules>
 </config>
