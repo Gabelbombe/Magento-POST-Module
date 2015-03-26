@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config>
+    <menu>
+        <post_menu translate="title" module="postmodule">
+            <title>Post Module</title>
+            <sort_order>9999</sort_order>
+            <action>postmodule/index/index</action>
+        </post_menu>
+    </menu>
+</config>

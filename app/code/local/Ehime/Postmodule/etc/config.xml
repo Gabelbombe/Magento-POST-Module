@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ehime_postmodule>
+            <version>1.0.0</version>
+            <depends>
+                <!-- no dependencies -->
+            </depends>
+        </ehime_postmodule>
+    </modules>
+    <global>
+        <models />
+        <blocks />
+        <resources />
+        <extraconfig />
+        <helpers>
+            <postmodule>
+                <class>Ehime_Postmodule_Helper</class>
+            </postmodule>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <ehime_postmodule>
+                <use>admin</use>
+                <args>
+                    <module>Ehime_Postmodule</module>
+                    <frontName>postmodule</frontName>
+                </args>
+            </ehime_postmodule>
+        </routers>
+    </admin>
+</config>
