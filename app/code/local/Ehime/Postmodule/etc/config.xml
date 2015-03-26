@@ -34,6 +34,8 @@
             </sales_order_place_after>
         </events>
 
+        <!-- probably going to need to name out each silly events =/ -->
+
     </global>
     <admin>
         <routers>
