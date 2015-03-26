@@ -1,0 +1,5 @@
+#POST Module
+app/etc/modules/Ehime_Postmodule.xml app/etc/modules/Ehime_Postmodule.xml
+
+app/code/local/Ehime/Postmodule/etc/adminhtml.xml app/code/local/Ehime/Postmodule/etc/adminhtml.xml
+app/code/local/Ehime/Postmodule/etc/config.xml app/code/local/Ehime/Postmodule/etc/config.xml
