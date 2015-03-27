@@ -3,11 +3,13 @@ Class Ehime_Postmodule_Model_Observer
 {
     public function ping(Varien_Event_Observer $observer)
     {
-//        // im not sure how to fire this prior to the events, but maybe we can detect and discard?
-//        $event = $observer->getEvent();
-//        if (! isset($event)) {
-//            return $this;
-//        }
+        $eventName = $observer->getEvent()->getName();
+        $configuredEvent = Mage::getStoreConfig('the/path/here');
+
+        if ($configuredEvent !== $eventName)
+        {
+            return;
+        }
 
         $data = $observer->getData('order_ids');
         $url  = 'http://foo.com'; // needs to be fetched...
